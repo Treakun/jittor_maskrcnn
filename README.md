@@ -35,7 +35,7 @@ python tools/test.py \
 
 ## 日志文件
 
-所有训练和验证日志以及训练loss保存在 `logs/` 目录
+所有训练和验证日志以及训练loss图像保存在 `logs/` 目录
 
 ## 实验配置
 
