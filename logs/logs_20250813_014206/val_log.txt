@@ -1,0 +1,3 @@
+epoch	det_mAP	seg_mAP	mean_train_loss
+5	0.0000	0.0000	2.600305
+6	0.0000	0.0000	2.599306

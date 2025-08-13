@@ -1,0 +1,33 @@
+MODEL:
+  NAME: "MaskRCNN"
+  NUM_CLASSES: 80         
+  BACKBONE: "resnet50"
+  ANCHOR_SIZES: [32, 64, 128, 256, 512]
+  ASPECT_RATIOS: [0.5, 1.0, 2.0]
+  ROI_POOLER_RESOLUTION: 7
+  ROI_POOLER_SCALES: [0.25, 0.125, 0.0625, 0.03125]
+  MASK_POOLER_RESOLUTION: 14
+  MASK_POOLER_SCALES: [0.25, 0.125, 0.0625, 0.03125]
+  load_pretrain_weights: True
+
+DATA:
+  TRAIN_IMG_DIR: "data/coco/images/train2017"
+  TRAIN_ANN: "data/coco/annotations/instances_train2017.json"
+  VAL_IMG_DIR: "data/coco/images/val2017"
+  VAL_ANN: "data/coco/annotations/instances_val2017.json"
+  SAMPLE_FRACTION: 0.02   
+
+SOLVER:
+  BASE_LR: 0.0004       
+  MOMENTUM: 0.9
+  WEIGHT_DECAY: 0.001
+  BATCH_SIZE: 1
+  MAX_EPOCHS: 12
+  STEPS: [2, 9]
+  GAMMA: 0.9
+  NUM_WORKERS: 8
+  PRINT_FREQ: 100
+  RESUME: outputs/model_7.pkl
+  MIN_LR_RATIO: 0.01     
+
+OUTPUT_DIR: "outputs"
