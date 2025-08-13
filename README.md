@@ -20,7 +20,7 @@ data/coco/
 ## 训练脚本
 
 ```bash
-python tools/train.py \
+python tools/train.py
 ```
 
 ## 测试脚本
