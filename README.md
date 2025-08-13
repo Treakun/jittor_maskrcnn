@@ -35,7 +35,7 @@ python tools/test.py \
 
 ## 日志文件
 
-所有训练和测试日志保存在 `logs/` 目录
+所有训练和验证日志以及训练loss保存在 `logs/` 目录
 
 ## 实验配置
 
@@ -47,7 +47,9 @@ python tools/test.py \
 | 初始学习率    | 0.0004           |
 | 优化器        | SGD with Momentum|
 
+## 实验结果
 
+代码可能仍然存在一些bug，导致验证和测试结果很差。
 
 ## 与 PyTorch 实现对齐
 
